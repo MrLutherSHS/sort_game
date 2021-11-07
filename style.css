@@ -1,0 +1,15 @@
+item {
+    padding: 0.5em;
+    min-width: 2em;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+item.selected {
+    border-color: rebeccapurple;
+}
+
+button {
+    margin: 0.5em;
+}
