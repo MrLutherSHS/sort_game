@@ -1,4 +1,6 @@
 # html-sort-game
+Originally created by ephphatha https://github.com/ephphatha/html-sort-game
+
 Gamified javascript/html webapp to allow manually performing bubblesort.
 
 Press the "Next" button or the "N" key on your keyboard to move the cursor (highlighting selected items) to the right. Press the "Swap" button or the "S" key on your keyboard to swap the two items under the cursor. This will also move the cursor one space to the right.  
