@@ -3,23 +3,7 @@
 
 <head>
     <title>Sorting Algorithms</title>
-    <style>
-        item {
-            padding: 0.5em;
-            min-width: 2em;
-            display: inline-block;
-            text-align: center;
-            border: 1px solid transparent;
-        }
-
-        item.selected {
-            border-color: rebeccapurple;
-        }
-
-        button {
-            margin: 0.5em;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -116,7 +100,7 @@
             if (i >= index) {
                 items[i].classList.remove('dirty');
             }
-            
+
             if (i == index || i == index + 1) {
                 if (!items[i].classList.contains('selected')) {
                     items[i].classList.add('selected');
