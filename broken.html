@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Sorting Algorithm Trainer</h1>
+        </header>
+        <main>
+            <div class="controls-top">
+                <div class="control-group">
+                    <label for="itemCount">Number of elements:</label>
+                    <input type="number" id="itemCount" name="itemCount" value="4" min="4" step="1">
+                </div>
+                <div class="lives-counter">
+                    <span>Lives: <span id="lives">3</span></span>
+                </div>
+                <button type="button" id="restart" class="btn btn-restart">Restart</button>
+            </div>
+            
+            <div class="game-area">
+                <div id="historyContainer" class="history-container"></div>
+                <div id="itemContainer" class="item-container"></div>
+            </div>
+            
+            <div class="controls-bottom">
+                <button type="button" id="swap" class="btn btn-action">Swap</button>
+                <button type="button" id="next" class="btn btn-action">Next</button>
+            </div>
+            
+            <div class="instructions">
+                <h2>Controls</h2>
+                <div class="instructions-content">
+                    <dl>
+                        <dt>"Swap" button / "S" key</dt>
+                        <dd>Swaps the two selected items then moves the cursor one space to the right.</dd>
+                        <dt>"Next" button / "N" key</dt>
+                        <dd>Leaves the selected items in their current order then moves the cursor one space to the right.</dd>
+                    </dl>
+                    <p>
+                        When you reach the end of a pass press "OK" or the "Space" key on your keyboard if you believe the list is
+                        sorted, otherwise press "Cancel" or the "Escape" key on your keyboard to perform another pass.
+                    </p>
+                    <p>
+                        If you manually change the number of elements you will need to restart to generate a new list of that size.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Sorting Algorithms Learning Tool</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

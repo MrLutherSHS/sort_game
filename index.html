@@ -1,68 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Algorithms</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Bubble Sort Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .elements {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .element {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        button, input {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
 </head>
-
 <body>
     <div class="container">
-        <header>
-            <h1>Sorting Algorithm Trainer</h1>
-        </header>
-        <main>
-            <div class="controls-top">
-                <div class="control-group">
-                    <label for="itemCount">Number of elements:</label>
-                    <input type="number" id="itemCount" name="itemCount" value="4" min="4" step="1">
-                </div>
-                <div class="lives-counter">
-                    <span>Lives: <span id="lives">3</span></span>
-                </div>
-                <button type="button" id="restart" class="btn btn-restart">Restart</button>
-            </div>
-            
-            <div class="game-area">
-                <div id="historyContainer" class="history-container"></div>
-                <div id="itemContainer" class="item-container"></div>
-            </div>
-            
-            <div class="controls-bottom">
-                <button type="button" id="swap" class="btn btn-action">Swap</button>
-                <button type="button" id="next" class="btn btn-action">Next</button>
-            </div>
-            
-            <div class="instructions">
-                <h2>Controls</h2>
-                <div class="instructions-content">
-                    <dl>
-                        <dt>"Swap" button / "S" key</dt>
-                        <dd>Swaps the two selected items then moves the cursor one space to the right.</dd>
-                        <dt>"Next" button / "N" key</dt>
-                        <dd>Leaves the selected items in their current order then moves the cursor one space to the right.</dd>
-                    </dl>
-                    <p>
-                        When you reach the end of a pass press "OK" or the "Space" key on your keyboard if you believe the list is
-                        sorted, otherwise press "Cancel" or the "Escape" key on your keyboard to perform another pass.
-                    </p>
-                    <p>
-                        If you manually change the number of elements you will need to restart to generate a new list of that size.
-                    </p>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <p>Sorting Algorithms Learning Tool</p>
-        </footer>
+        <h1>Bubble Sort Game</h1>
+        <div>
+            <label for="numElements">Number of Elements (4-12): </label>
+            <input type="number" id="numElements" value="4" min="4" max="12">
+        </div>
+        <div class="elements" id="elements"></div>
+        <div class="controls">
+            <button id="swap">Swap (S)</button>
+            <button id="next">Next (N)</button>
+            <button id="restart">Restart (R)</button>
+        </div>
+        <div id="lives">Lives: 3</div>
+        <div id="timer">Time: 0s</div>
+        <div id="message"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
-
 </html>

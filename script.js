@@ -76,6 +76,7 @@ function selectItem(index) {
 }
 
 function swap() {
+    console.log('swap function')
     const selectedItems = getSelectedItems();
 
     if (selectedItems.length == 2) {
@@ -92,9 +93,16 @@ function swap() {
     }
 
     next();
+    // if (selectedIndex >= items.length - 2) {
+    //     window.setTimeout(promptForEndState);
+    // } else {
+    //     selectItem(selectedIndex + 1);
+    // }
+
 }
 
 function next() {
+    console.log('next function')
     if (timeStarted == undefined) {
         timeStarted = Date.now();
     }
@@ -111,6 +119,7 @@ function next() {
 
     // Check if items should be swapped - only remove life if we should swap but we're trying to move on
     if (selectedIndex >= 0 && selectedIndex < items.length - 1) {
+    console.log(items)
         if (shouldSwapItems(items[selectedIndex], items[selectedIndex + 1])) {
             removeLife("You should swap these items.");
             return;
@@ -230,6 +239,7 @@ function shouldSwapItems(lhs, rhs) {
     // Returns true if left item is GREATER than right item (needs swapping)
     const leftValue = Number.parseInt(lhs.textContent);
     const rightValue = Number.parseInt(rhs.textContent);
+    console.log(leftValue, rightValue)
     return leftValue > rightValue;
 }
 
