@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f5ff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background-color: #a3c4f3;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 500;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Controls Styling */
+.controls-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lives-counter {
+    padding: 8px 15px;
+    background-color: #ffb3ba;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Game Area */
+.game-area {
+    margin: 20px 0;
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+item {
+    padding: 12px;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+item.selected {
+    border-color: #a3c4f3;
+    background-color: #bde0fe;
+    box-shadow: 0 0 0 3px rgba(163, 196, 243, 0.3);
+    transform: translateY(-3px) scale(1.05);
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 5;
+}
+
+item.dirty {
+    border-color: #ffb3ba;
+}
+
+/* History Container */
+.history-container {
+    margin-bottom: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-container div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.history-container item {
+    padding: 5px;
+    min-width: 30px;
+    height: 30px;
+    font-size: 14px;
+}
+
+/* Buttons */
+.controls-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-action {
+    background-color: #a3c4f3;
+    color: #333;
+    min-width: 100px;
+}
+
+.btn-action:hover {
+    background-color: #90b0e0;
+}
+
+.btn-restart {
+    background-color: #ffb3ba;
+    color: #333;
+}
+
+.btn-restart:hover {
+    background-color: #ff9ca5;
+}
+
+/* Instructions */
+.instructions {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.instructions h2 {
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: 500;
+}
+
+.instructions-content {
+    font-size: 15px;
+}
+
+dl {
+    margin-bottom: 15px;
+}
+
+dt {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .controls-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .lives-counter {
+        margin-left: 0;
+    }
+    
+    item {
+        min-width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    body {
+        padding: 0;
+    }
+    
+    .controls-bottom {
+        flex-direction: column;
+    }
+    
+    .btn-action {
+        width: 100%;
+    }
+}
